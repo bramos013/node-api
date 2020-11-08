@@ -3,6 +3,7 @@ const mongoose = require('mongoose'); // Chamando o mongoose
 const requireDir = require('require-dir'); // Chamando o require-dir
 //Iniciando app através da função express
 const app = express();  
+app.use(express.json()); //Permitir enviar dados no formato json
 
 //Conectando o banco de dados
 mongoose.connect("mongodb://localhost:27017/nodeapi",
